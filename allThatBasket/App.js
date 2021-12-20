@@ -17,6 +17,11 @@ import { client } from './src/Client';
 import AuthContext from './src/AuthContext';
 
 import Home from './Screens/Home';
+import CoachPg from './Screens/CoachRec';
+import SchePg from './Screens/SchePg';
+import ComPg from './Screens/ComPg';
+import MyPg from './Screens/MyPg';
+import CchDetail from './Screens/CoachDetailPg';
 
 const Stack = createStackNavigator();
 
@@ -49,6 +54,31 @@ export default function App() {
               options={{
                 headerShown: false,
               }}
+            />
+            <Stack.Screen
+              name='CoachPg'
+              component={CoachPg}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name='SchePg'
+              component={SchePg}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name='ComPg'
+              component={ComPg}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name='MyPg'
+              component={MyPg}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name='CchDetail'
+              component={CchDetail}
+              options={{ headerShown: true }}
             />
           </Stack.Navigator>
         </NavigationContainer>
