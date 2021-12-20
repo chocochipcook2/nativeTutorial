@@ -6,9 +6,18 @@ var styles = StyleSheet.create({
     marginTop: getStatusBarHeight(),
     flex: 1,
     padding: 3,
-    backgroundColor: '#EFEFEF',
+    backgroundColor: '#E8EAED',
     flexDirection: 'column',
   },
+  tasksWrapper: {
+    paddingTop: 80,
+    paddingHorizontal: 20,
+  },
+  sectionTitle: {
+    fontSize: 24,
+    fontWeight: 'bold',
+  },
+  items: { marginTop: 30 },
   header: {
     width: '100%',
     height: 50,
@@ -18,27 +27,34 @@ var styles = StyleSheet.create({
     borderTopRightRadius: 30,
     borderTopStartRadius: 30,
   },
-  title: {
-    width: '100%',
-    flex: 1,
+
+  addText: {},
+  addWrapper: {
+    width: 60,
+    height: 60,
+    backgroundColor: '#fff',
+    borderRadius: 60,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#9aa9ff',
-    borderBottomRightRadius: 30,
-    borderBottomStartRadius: 30,
-    overflow: 'hidden',
+    borderColor: '#C0C0C0',
+    borderWidth: 1,
   },
-  content: {
-    height: 80,
-    justifyContent: 'space-around',
-    alignItems: 'center',
-    backgroundColor: '#d6ca1a',
-    flexDirection: 'row',
+  input: {
+    paddingVertical: 15,
+    paddingHorizontal: 15,
+    borderRadius: 60,
+    backgroundColor: '#fff',
+    borderColor: '#C0C0C0',
+    borderWidth: 1,
+    width: 250,
   },
-  footer: {
+  writeTaskWrapper: {
+    position: 'absolute',
+    bottom: 60,
     width: '100%',
-    flex: 1 / 5,
-    backgroundColor: '#1ad657',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
 });
 
