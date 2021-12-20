@@ -52,6 +52,29 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     flexDirection: 'row',
   },
+  item: {
+    flex: 5 / 6,
+    // marginHorizontal: 16,
+  },
+  num: {
+    flex: 1 / 6,
+    // marginRight: "80%",
+  },
+  title: {
+    fontSize: 32,
+  },
+  scho: {
+    fontSize: 15,
+  },
+  psysical: {
+    fontSize: 15,
+  },
+  score: {
+    fontSize: 32,
+  },
+  day: {
+    fontSize: 15,
+  },
 });
 
 export default styles;

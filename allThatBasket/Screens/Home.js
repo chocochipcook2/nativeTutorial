@@ -12,7 +12,6 @@ import {
 import { SvgUri } from 'react-native-svg';
 import { SvgXml } from 'react-native-svg';
 import SVGImg from '../assets/record.svg';
-import homeSVG from '../assets/Home.svg';
 
 import styles from '../assets/styles/style1';
 import Box from '../Components/Box';
@@ -24,32 +23,83 @@ import { TRADE } from '../Query';
 const DATA = [
   {
     id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
-    title: 'First Item',
+    title: '정해일',
+    scho: '중등부',
+    psysical: '골밑슛 89 / 레이업 64 / 자유투 77',
+    score: '99',
+    day: '12.08',
   },
   {
     id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
-    title: 'Second Item',
+    title: '정해일',
+    scho: '중등부',
+    psysical: '골밑슛 89 / 레이업 64 / 자유투 77',
+    score: '24',
+    day: '12.08',
   },
   {
     id: '58694a0f-3da1-471f-bd96-145571e29d72',
-    title: 'Third Item',
+    title: '정해일',
+    scho: '중등부',
+    psysical: '골밑슛 89 / 레이업 64 / 자유투 77',
+    score: '34',
+    day: '12.08',
   },
   {
-    id: '58694a0f-3da1-471f-bd96-141244e29d72',
-    title: 'Fourth Item',
+    id: '5da1-471f-bd96-145571e29d72',
+    title: '정해일',
+    scho: '중등부',
+    psysical: '골밑슛 89 / 레이업 64 / 자유투 77',
+    score: '84',
+    day: '12.08',
   },
   {
-    id: '58694a0f-3da1-471f-bd96-456431e29d72',
-    title: 'Fifth Item',
+    id: '58694a0f-3da1-4145571e29d72',
+    title: '정해일',
+    scho: '중등부',
+    psysical: '골밑슛 89 / 레이업 64 / 자유투 77',
+    score: '84',
+    day: '12.08',
+  },
+  {
+    id: '58694da1-471f-bd96-145571e29d72',
+    title: '정해일',
+    scho: '중등부',
+    psysical: '골밑슛 89 / 레이업 64 / 자유투 77',
+    score: '84',
+    day: '12.08',
   },
 ];
-const Item = ({ title, data }) => (
-  <View style={styles.item}>
-    <Text style={styles.title}>{title}</Text>
-    <Text>{data.id}</Text>
+const Item = ({ title, scho, psysical, score, day }) => (
+  <View
+    style={{
+      flex: 1,
+      flexDirection: 'row',
+      backgroundColor: 'gray',
+      padding: 20,
+      marginVertical: 10,
+    }}
+  >
+    <View style={styles.item}>
+      <Text style={styles.title}>{title}</Text>
+      <Text style={styles.scho}>{scho}</Text>
+      <Text style={styles.psysical}>{psysical}</Text>
+    </View>
+    <View style={styles.num}>
+      <Text style={styles.score}>{score}</Text>
+      <Text style={styles.day}>{day}</Text>
+    </View>
   </View>
 );
-const renderItem = ({ item }) => <Item title={item.title} data={item} />;
+const renderItem = ({ item }) => (
+  <Item
+    title={item.title}
+    scho={item.scho}
+    psysical={item.psysical}
+    score={item.score}
+    day={item.day}
+  />
+);
 
 const HomeSvgXml = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M17.5 8C17.5 7.72386 17.2761 7.5 17 7.5C16.7239 7.5 16.5 7.72386 16.5 8H17.5ZM3.5 8C3.5 7.72386 3.27614 7.5 3 7.5C2.72386 7.5 2.5 7.72386 2.5 8H3.5ZM18.6464 10.3536C18.8417 10.5488 19.1583 10.5488 19.3536 10.3536C19.5488 10.1583 19.5488 9.84171 19.3536 9.64645L18.6464 10.3536ZM10 1L10.3536 0.646447C10.1583 0.451184 9.84171 0.451184 9.64645 0.646447L10 1ZM0.646447 9.64645C0.451184 9.84171 0.451184 10.1583 0.646447 10.3536C0.841709 10.5488 1.15829 10.5488 1.35355 10.3536L0.646447 9.64645ZM5 19.5H15V18.5H5V19.5ZM17.5 17V8H16.5V17H17.5ZM3.5 17V8H2.5V17H3.5ZM19.3536 9.64645L10.3536 0.646447L9.64645 1.35355L18.6464 10.3536L19.3536 9.64645ZM9.64645 0.646447L0.646447 9.64645L1.35355 10.3536L10.3536 1.35355L9.64645 0.646447ZM15 19.5C16.3807 19.5 17.5 18.3807 17.5 17H16.5C16.5 17.8284 15.8284 18.5 15 18.5V19.5ZM5 18.5C4.17157 18.5 3.5 17.8284 3.5 17H2.5C2.5 18.3807 3.61929 19.5 5 19.5V18.5Z" fill="#333333"/>
