@@ -35,7 +35,7 @@ function MyPg({ navigation }) {
 <rect x="0.5" y="0.5" width="23" height="23" stroke="black" stroke-opacity="0.08"/>
 </svg>
 `;
-  const CoachSvg = () => <SvgXml xml={CoachSvgXml} widtg='30' height='30' />;
+  const CoachSvg = () => <SvgXml xml={CoachSvgXml} width='30' height='30' />;
   const HomeSvg = () => <SvgXml xml={HomeSvgXml} width='30' height='30' />;
   const ComSvg = () => <SvgXml xml={ComSvgXml} width='30' height='30' />;
   const MypgSvg = () => <SvgXml xml={MypgSvgXml} width='30' height='30' />;

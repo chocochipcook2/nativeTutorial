@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import React, { useState, useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+// import { createDrawerNavigator } from '@react-navigation/drawer';
 import 'react-native-gesture-handler';
 // apollo
 
@@ -24,6 +25,7 @@ import MyPg from './Screens/MyPg';
 import CchDetail from './Screens/CoachDetailPg';
 
 const Stack = createStackNavigator();
+//const Drawer = createDrawerNavigator();
 
 export default function App() {
   const [user, setUser] = useState({
@@ -51,9 +53,7 @@ export default function App() {
             <Stack.Screen
               name='Home'
               component={Home}
-              options={{
-                headerShown: false,
-              }}
+              options={{ headerShown: false }}
             />
             <Stack.Screen
               name='CoachPg'
@@ -78,7 +78,7 @@ export default function App() {
             <Stack.Screen
               name='CchDetail'
               component={CchDetail}
-              options={{ headerShown: true }}
+              options={{ headerShown: false }}
             />
           </Stack.Navigator>
         </NavigationContainer>

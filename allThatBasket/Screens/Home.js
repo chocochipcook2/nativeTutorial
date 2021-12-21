@@ -190,7 +190,7 @@ function Home({ navigation }) {
             data={DATA}
             renderItem={renderItem}
             keyExtractor={(item) => item.id}
-            onEndReached={() => navigation.navigate('CoachRec')}
+            //onEndReached={() => navigation.navigate('CoachPg')}
             //horizontal={true}
           />
         </View>

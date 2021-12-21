@@ -44,6 +44,19 @@ function CoachPg({ navigation }) {
     <View style={styles.container}>
       <View style={styles.header}>
         <Text>hello</Text>
+        <TouchableOpacity
+          onPress={() =>
+            navigation.navigate('CchDetail', {
+              stdName: '최우식',
+              shoot: 54,
+              layup: 68,
+              free: 38,
+              drib: 24,
+            })
+          }
+        >
+          <Text>ㄱㄱ</Text>
+        </TouchableOpacity>
       </View>
       <View style={styles.footer}>
         <TouchableOpacity
